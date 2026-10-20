@@ -3,6 +3,7 @@ from pages.home_page import HomePage
 def test_homepage_loads(page):
     home = HomePage(page)
     home.open_homepage()
+    page.pause()
 
     assert home.get_heading() == "Learn to code without getting stuck."
     assert page.title() == "Learn to code without getting stuck | Dev4Hub"

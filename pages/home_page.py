@@ -17,4 +17,5 @@ class HomePage(BasePage):
 
     def click_course(self, course_name):
         self.course_link(course_name).click()
+        self.page.wait_for_url(f"**/{course_name.lower()}")
         return self
